@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* 텍스트 애니메이션 */
+@keyframes text{
+    0%{
+        font-size: 12px;
+        opacity: 0;
+        transform: translate(0,0)
+
+    }
+    100%{
+        font-size: 24px;
+        opacity: 1;
+        transform: translate(200px,50px)
+    }
+}
+.text {
+    background: pink;
+    height: 200px
+
+}
+.text span{
+    background: yellow;
+    display: block;
+    position: absolute;
+    animation-name: text; 
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+    animation-iteration-count: infinite;
+    animation-direction : alternate;
+    animation-timing-function: ease-in-out;
+
+}
+/* transition 애니메이션 */
+.circle{
+    width: 150px;
+    height: 150px;
+    transition: all 0.5s;
+    background: pink; 
+}
+.circle:hover{
+    border-radius: 50%;
+}
